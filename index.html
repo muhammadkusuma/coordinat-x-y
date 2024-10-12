@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Position</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #coordinates {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="coordinates">Click anywhere to see the coordinates</div>
+
+    <script>
+        // Menangkap event klik kiri
+        document.addEventListener('click', function (event) {
+            // Mendapatkan koordinat x dan y saat klik
+            const x = event.clientX;
+            const y = event.clientY;
+
+            // Menampilkan koordinat di elemen HTML
+            document.getElementById('coordinates').textContent = `X: ${x}, Y: ${y}`;
+        });
+    </script>
+
+</body>
+
+</html>
